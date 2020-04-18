@@ -1,6 +1,6 @@
 # Sudoku-Core
 A simple python code to solve a Sudoku board.
 
-This code takes in 9 lines of 9 integers each with blanks represented as -1
+This code takes in 9 lines of 9 integers each with blanks represented as 0
 and outputs the solution.
-It works on a simple brute force algorithm
+It works on a DFS (Depth First Seach) algorithm using recurssion.
