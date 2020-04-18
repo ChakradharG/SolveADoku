@@ -51,6 +51,7 @@ def update(r,c):
                         if update(i,j):
                             break
                 else:
+                    board[i][j] = 0
                     return False
                 return True
             j += 1
