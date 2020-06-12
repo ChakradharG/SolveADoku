@@ -1,3 +1,6 @@
+board = [[0 for i in range(9)] for j in range(9)]
+moves = {}
+
 def checkList(l):
 	numCnt = {0:0}
 	for i in l:
@@ -20,23 +23,24 @@ def checkCol(c):
 	return checkList(column)
 
 
-def checkBox(r,c):
+def checkBox(r, c):
 	box = []
-	for i in range(r,r+3):
-		for j in range(c,c+3):
+	for i in range(r, r+3):
+		for j in range(c, c+3):
 			box.append(board[i][j])
 	return checkList(box)
 
 
-def solve(r,c):
-	i,j = r,c
+def solve(r, c):
+	i, j = r, c
 	while i < 9:
 		while j < 9:
 			if board[i][j] == 0:
-				for x in range(1,10):
+				for x in range(1, 10):
 					board[i][j] = x
-					if checkRow(i) and checkCol(j) and checkBox(i-i%3,j-j%3):
-						if solve(i,j):
+					if checkRow(i) and checkCol(j) and checkBox(i-i%3, j-j%3):
+						if solve(i, j):
+							moves[(i, j)] = x
 							break
 				else:
 					board[i][j] = 0
