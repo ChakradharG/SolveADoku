@@ -43,7 +43,6 @@ def getBoard():
 def readBoard(image):
 	for i in range(9):
 		for j in range(9):
-			# subImage = cv2.resize(image[i*s: (i+1)*s, j*s: (j+1)*s], (fs, fs), interpolation=cv2.INTER_AREA)
 			subImage = image[i*s + 3: (i+1)*s - 3, j*s + 3: (j+1)*s - 3]	#(+3, -3) is a hack to remove border contours
 			contour, _ = cv2.findContours(subImage, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 			if contour != []:
