@@ -7,7 +7,13 @@ Open up sudoku.com and solve a board. Requires Selenium and chrome webdriver.
 ## 2. Android
 Mirror android screen using scrcpy and solve a board in Sudoku app. Requires Scrcpy and an android device with usb debugging enabled.
 
-## 3. Terminal
+## 3. Arduino
+Solve a board on your android device using arduino. Requires pyserial and other ardunio hardware.
+
+## 4. Webcam
+Capture a board through the webcam and augment the solution on the video feed from the webcam.
+
+## 5. Terminal
 Pass a board through the terminal and display the solution in the terminal. This code takes in 9 lines of 9 integers, each with blanks represented as 0.
 
 
@@ -19,6 +25,7 @@ Pass a board through the terminal and display the solution in the terminal. This
 * tensorflow
 * keras
 * scrcpy
+* pyserial
 
 <br>
 
