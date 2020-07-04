@@ -1,8 +1,8 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'	#To suppress warnings thrown by tensorflow
 from time import sleep
 import numpy as np
 from cv2 import cv2
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'	#To suppress warnings thrown by tensorflow
 import pyautogui as pg
 from selenium import webdriver as wd
 import Sudoku_Core as SC
