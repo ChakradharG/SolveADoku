@@ -9,7 +9,7 @@ import OCR
 
 
 s = 522//9	#Size of board//9
-fs = 25	#Size of the final image
+fs = 20	#Size of the final image
 numPos = {1: (90, 760),
 		2: (175, 760),
 		3: (260, 760),
