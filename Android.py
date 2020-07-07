@@ -1,6 +1,5 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'	#To suppress warnings thrown by tensorflow
-from time import sleep
 import numpy as np
 from cv2 import cv2
 import pyautogui as pg
@@ -22,12 +21,6 @@ numPos = {1: (90, 760),
 
 
 def getBoard():
-	for i in range(4):
-		pg.click(420,520)	#Changing the difficulty to extreme
-	pg.moveTo(261,600, 0.1)	#Starting a new game
-	pg.click()
-
-	sleep(2)
 	image = pg.screenshot(region=(5, 165, 522, 522))
 	image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2GRAY)
 	_,image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
