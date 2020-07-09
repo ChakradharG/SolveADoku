@@ -4,13 +4,13 @@ from time import sleep
 import numpy as np
 from cv2 import cv2
 import pyautogui as pg
-from selenium import webdriver as wd
 import Sudoku_Core as SC
 import OCR
+from selenium import webdriver as wd
 
 
 s = 496//9	#Size of board//9
-fs = 20	#Size of the final image
+fs = 25	#Size of the final image
 numPos = {1: (940, 370),
 		2: (1050, 370),
 		3: (1160, 370),
@@ -29,6 +29,7 @@ def getBoard():
 	sleep(2)
 	pg.click(390, 280)
 	sleep(1)
+	
 	image = pg.screenshot(region=(364, 254, 496, 496))
 	image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2GRAY)
 	_,image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY_INV)
@@ -66,8 +67,10 @@ def main():
 	image = getBoard()
 	readBoard(image)
 	print('Got the board, now solving')
-	SC.solve(0, 0)
-	outputBoard()
+	if SC.solve(0, 0):
+		outputBoard()
+	else:
+		print('Couldn\'t solve')
 	
 	input('Press any key to exit')
 	driver.close()

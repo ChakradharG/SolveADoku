@@ -5,7 +5,7 @@ A sudoku solver offering multiple ways of solving boards. The core algorithm to 
 Open up sudoku.com and solve a board. Requires Selenium and chrome webdriver.
 
 ## 2. Android
-Mirror android screen using scrcpy and solve a board in [Sudoku app](https://play.google.com/store/apps/details?id=ee.dustland.android.dustlandsudoku&hl=en). Requires Scrcpy and an android device with usb debugging enabled.
+Mirror android screen using scrcpy and solve a board in [Sudoku app](https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android&hl=en_IN). Requires Scrcpy and an android device with usb debugging enabled.
 
 ## 3. Terminal
 Pass a board through the terminal and display the solution in the terminal. This code takes in 9 lines of 9 integers, each with blanks represented as 0.

@@ -1,5 +1,6 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'	#To suppress warnings thrown by tensorflow
+from time import sleep
 import numpy as np
 from cv2 import cv2
 import pyautogui as pg
@@ -7,28 +8,19 @@ import Sudoku_Core as SC
 import OCR
 
 
-s = 522//9	#Size of board//9
-fs = 20	#Size of the final image
-numPos = {1: (90, 760),
-		2: (175, 760),
-		3: (260, 760),
-		4: (345, 760),
-		5: (430, 760),
-		6: (90, 845),
-		7: (175, 845),
-		8: (260, 845),
-		9: (345, 845)}
+s = 513//9	#Size of board//9
+fs = 25	#Size of the final image
 
 
 def getBoard():
-	image = pg.screenshot(region=(5, 165, 522, 522))
-	image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2GRAY)
-	_,image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
+	pg.click(266, 740)
+	sleep(1)
+	pg.click(266, 930)	#Changing the difficulty to expert
+	sleep(2)
 
-	pixels = image.flatten()
-	#Checking if the background is white, and if so, inverting the background and the foreground
-	if np.count_nonzero(pixels == 0) < np.count_nonzero(pixels == 255):
-		_, image = cv2.threshold(baseIm, 127, 255, cv2.THRESH_BINARY_INV)
+	image = pg.screenshot(region=(10, 187, 513, 513))
+	image = cv2.cvtColor(np.asarray(image), cv2.COLOR_RGB2GRAY)
+	_,image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY_INV)
 
 	return image
 
@@ -48,12 +40,16 @@ def readBoard(image):
 
 def outputBoard():
 	for ((posY, posX), v) in SC.moves.items():
-		posX = 35 + posX * 58
-		posY = 195 + posY * 58
+		posX = 42 + posX * 57
+		posY = 216 + posY * 57
 		pg.moveTo(posX, posY, 0.1)
 		pg.click()
-		pg.moveTo(numPos[v][0], numPos[v][1], 0.1)
-		pg.click()
+
+		vX = 42 + 55*(v-1)
+		vY = 843
+		# pg.moveTo(vX, vY, 0.1)	#To use the numpad in the app
+		# pg.click()
+		pg.typewrite(str(v))	#To send numbers from the keyboard
 
 
 def main():	
@@ -61,8 +57,10 @@ def main():
 	readBoard(image)
 
 	print('Got the board, now solving')
-	SC.solve(0, 0)
-	outputBoard()
+	if SC.solve(0, 0):
+		outputBoard()
+	else:
+		print('Couldn\'t solve')
 	
 	input('Press any key to exit')
 
