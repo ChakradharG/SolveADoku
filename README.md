@@ -1,4 +1,4 @@
-# Sudoku-Core
+# Sudoku-Solver
 A sudoku solver offering multiple ways of solving boards. The core algorithm to solve the board works on a DFS (Depth First Search) algorithm using recursion.
 
 ## 1. Chrome
