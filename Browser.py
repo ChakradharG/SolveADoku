@@ -60,7 +60,7 @@ def outputBoard():
 
 
 def main():
-	driver = wd.Chrome()
+	driver = wd.Chrome()	#Change this line if using any other browser
 	driver.get('https://sudoku.com')
 	sleep(2)
 	
