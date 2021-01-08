@@ -1,6 +1,3 @@
-# Sudoku-Solver
-A sudoku solver offering multiple ways of solving boards. The core algorithm to solve the board works on a DFS (Depth First Search) algorithm using recursion.
-
 ## 1. Chrome
 Open up sudoku.com and solve a board. Requires Selenium and chrome webdriver.
 
@@ -12,14 +9,27 @@ Pass a board through the terminal and display the solution in the terminal. This
 
 
 ## Requirements:
-* opencv-python
-* pyautogui
-* selenium
-* tensorflow
-* keras
 * chrome webdriver
 * scrcpy
 
 <br>
 
 (Note: You may need to change the positions of mouse clicks depending upon resolution and position of buttons on screen)
+
+# SolveADoku
+A sudoku solver offering multiple ways of solving boards. The core algorithm to solve the board works on a DFS (Depth First Search) algorithm using recursion
+
+<br>
+
+## Getting Started
+* Clone this repository
+
+<br>
+
+## How to Use
+
+
+<br>
+
+## Example Output
+(Images/Videos)
