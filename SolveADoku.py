@@ -25,5 +25,5 @@ ch = input('''Welcome to Sudoku Solver. What would you like to do?
 3. Solve a board passed through the terminal
 ''')
 
-if ch in [1, 2, 3]:
+if ch in ['1', '2', '3']:
 	exec(f'func{ch}()')
