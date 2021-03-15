@@ -1,5 +1,0 @@
-keras
-tensorflow
-pyautogui
-opencv-python
-selenium
