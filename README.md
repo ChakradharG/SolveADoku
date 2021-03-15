@@ -5,7 +5,8 @@ A sudoku solver offering multiple ways of solving boards. The core algorithm to 
 
 ## Getting Started
 * Clone this repository
-* Install the required modules (pip install -r ```Requirements.txt```)
+* ```cd SolveADoku```
+* Install the required modules (```pip install -r requirements.txt```)
 * Download the chrome (or the browser of your choice) webdriver and save it into the same directory as the code
 * Download scrcpy on your PC and turn on USB Debugging on your Android Device (So as to mirror your phone's screen on your PC)
 * Run ```SolveADoku.py```
