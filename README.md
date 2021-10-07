@@ -15,8 +15,16 @@ A sudoku solver offering multiple ways of solving boards. The core algorithm to 
 
 ## How to Use
 * Run ```SolveADoku.py``` and select any of the avaiable options to solve a board
-* **Chrome**: Opens up [sudoku.com](https://sudoku.com) using selenium and solves a board
+* **Browser**: Opens up [sudoku.com](https://sudoku.com) using selenium and solves a board
 * **Android**: Mirrors android screen using scrcpy and solves a board in the [Sudoku app](https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android&hl=en_IN)
-* **Terminal**: Takes a board through the terminal and displays the solution in the terminal. This code takes in 9 lines of 9 integers, each with blanks represented as 0
+* **Terminal**: Takes a board through the terminal and displays the solution in the terminal. This code takes in 9 lines of 9 space-separated integers, each with blanks represented as 0
 
 (Note: You might need to change the positions of mouse clicks depending upon the resolution and position of buttons on screen)
+
+<br>
+
+## Demo
+### Browser
+![](Demo/Browser.gif)
+### Terminal
+![](Demo/Terminal.gif)
