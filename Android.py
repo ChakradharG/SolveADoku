@@ -45,8 +45,8 @@ def outputBoard():
 		pg.moveTo(posX, posY, 0.1)
 		pg.click()
 
-		vX = 42 + 55*(v-1)
-		vY = 843
+		# vX = 42 + 55*(v-1)
+		# vY = 843
 		# pg.moveTo(vX, vY, 0.1)	#To use the numpad in the app
 		# pg.click()
 		pg.typewrite(str(v))	#To send numbers from the keyboard
