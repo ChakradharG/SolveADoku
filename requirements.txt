@@ -1,5 +1,5 @@
 Keras==2.4.3
-tensorflow==2.5.1
+tensorflow==2.5.3
 PyAutoGUI==0.9.52
 opencv-python==4.5.1.48
 selenium==3.141.0
